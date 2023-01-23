@@ -27,18 +27,16 @@ const { createApp } = Vue
             }
         ],
         activeIndex: 0,
-        visible: 'visible',
-        notVisible: 'not-visible'
 
       }
     },
     methods: {
-        getSlide: function () {
-            if (this.slides[this.activeSlide] == 0) {
-                this.slides[this.activeSlide].classList.remove('this.notVisible');
-                this.slides[this.activeSlide].classList.add('this.visible');
-            }
-        }
+        getNext: function () {
+            this.activeIndex++;
+        },
+        getPrev: function () {
+            this.activeIndex--;
+        },
     }
   }).mount('#app')
 
