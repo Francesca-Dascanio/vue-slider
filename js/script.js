@@ -32,10 +32,25 @@ const { createApp } = Vue
     },
     methods: {
         getNext: function () {
-            this.activeIndex++;
+
+            if (this.activeIndex == this.slides.length - 1) {
+                this.activeIndex = 0;
+            }
+            else {
+                this.activeIndex++;
+            }
+           
+            
         },
         getPrev: function () {
-            this.activeIndex--;
+            
+            if (this.activeIndex == 0) {
+                this.activeIndex = this.slides.length - 1;
+            }
+            else {
+                this.activeIndex--;
+            }
+           
         },
     }
   }).mount('#app')
