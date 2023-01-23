@@ -37,9 +37,9 @@
 
                     </div>
 
-
-                    <div class="thumb" v-for="slide in slides">
-                        <img :src="slide.image" :alt="slide.title"/>
+                    <!--                                              se indice del thumbs è uguale a indice ad activeIndex allora espressione vera è classe active, altrimenti vuota -->
+                    <div class="thumb" v-for="(img, index) in thumbs" :class="index == activeIndex ? 'active': ''">
+                        <img :src="img"/>
                     </div>
                 </div>
 
