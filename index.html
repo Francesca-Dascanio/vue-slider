@@ -38,7 +38,7 @@
                     </div>
 
                     <!--                                              se indice del thumbs è uguale a indice ad activeIndex allora espressione vera è classe active, altrimenti vuota -->
-                    <div class="thumb" v-for="(img, index) in thumbs" :class="index == activeIndex ? 'active': ''">
+                    <div class="thumb" v-for="(img, index) in thumbs" :class="index == activeIndex ? 'active': ''" @click="activeIndex = index">
                         <img :src="img"/>
                     </div>
                 </div>
